@@ -1,0 +1,26 @@
+{
+  "AmazonSearchInputtext": {
+    "loc": "field-keywords",
+    "find_by": "NAME"
+  },
+  "AmazonSearchButton": {
+    "loc": "nav-search-submit-button",
+    "find_by": "ID"
+  },
+  "AmazonSearchButtonCSS": {
+    "loc": "input[id='twotabsearchtextbox']",
+    "find_by": "CSS_SELECTOR"
+  },
+  "LogoAmazonReturnMainPage": {
+    "loc": "nav-logo-link nav-progressive-attribute",
+    "find_by": "CLASS_NAME"
+  },
+  "CheckboxReceiveTomorrow": {
+    "loc": "//*[contains(text(),'Recíbelo Mañana)]/preceding::input[@type='checkbox']",
+    "find_by": "XPATH"
+  },
+  "ResultadosTitle": {
+    "loc": "//span[contains(text(),'Resultados')]",
+    "find_by": "XPATH"
+  }
+}
