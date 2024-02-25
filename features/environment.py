@@ -49,7 +49,10 @@ def after_scenario(context, driver):
             context.diver.close()
         except:
             pass
-        context.driver.quit()
+        try:
+            context.driver.quit()
+        except:
+            pass
     pass
 
 

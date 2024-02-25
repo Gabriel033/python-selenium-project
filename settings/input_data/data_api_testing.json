@@ -1,0 +1,5 @@
+{
+  "dir_path": "./settings/input_data/",
+  "url_get_method": "https://fakerestapi.azurewebsites.net/api/v1/Activities",
+  "wsdl": "https://ecs.syr.edu/faculty/fawcett/Handouts/cse775/code/calcWebService/Calc.asmx?WSDL"
+}

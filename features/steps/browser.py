@@ -35,14 +35,19 @@ def driver_context(context):
             capabilities = options_selected(browser.lower())
             service_obj = Service("./settings/drivers/geckodriver.exe")
             context.driver = webdriver.Firefox(service=service_obj, options=capabilities)
+            context.driver.implicitly_wait(int(driver_options.EXECUTION_OPTIONS.get('implicitly-wait')))
         elif browser.lower() == "edge":
             capabilities = options_selected(browser.lower())
             service_obj = Service("./settings/drivers/msedgedriver.exe")
             context.driver = webdriver.Edge(service=service_obj, options=capabilities)
+            context.driver.implicitly_wait(int(driver_options.EXECUTION_OPTIONS.get('implicitly-wait')))
         elif browser.lower() == "chrome":
             capabilities = options_selected(browser.lower())
             service_obj = Service("./settings/drivers/chromedriver.exe")
             context.driver = webdriver.Chrome(service=service_obj, options=capabilities)
+            context.driver.implicitly_wait(int(driver_options.EXECUTION_OPTIONS.get('implicitly-wait')))
+        elif browser.lower() == "backend":
+            context.driver == "backend"
+            pass
         else:
             raise Exception("Driver selected is not available")
-        context.driver.implicitly_wait(int(driver_options.EXECUTION_OPTIONS.get('implicitly-wait')))
