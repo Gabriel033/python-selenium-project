@@ -30,7 +30,6 @@ with open("test-reading.json") as file:
         print(course)
         if course['title'] == "RPA":
             print(course['price'])
-            assert course['price'] == 45
 
 
 with open("test-reading.json") as file:

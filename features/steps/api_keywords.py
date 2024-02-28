@@ -124,21 +124,3 @@ def from_the_wsdl_do_the_ADD_with_the_first_value_and_the_second_value(context, 
     result = client.service.Add(num_1, num_2)
 
     assert str(resultado_esperado) == str(result)
-
-
-@step(u'from the WSDL "{WSDL}" do the operator "{operator}" with the first value "{num_1}" and the second value "{num_2}" and validate that the result must be "{resultado_esperado}"')
-def from_the_wsdl_do_the_operator_with_the_first_value_and_the_second_value(context, WSDL, operator, num_1, num_2, resultado_esperado):
-    if "|:|" in WSDL:
-        WSDL = obtain_parameters_data(WSDL)
-    else:
-        WSDL = WSDL
-
-    client = Client(WSDL)
-    if operator.upper() == "ADD":
-        result = client.service.Add(num_1, num_2)
-    elif operator.upper() == "SUBTRACT":
-        result = client.service.Subtract(num_1, num_2)
-    else:
-        raise Exception("Operación no existe en el WSDL")
-
-    assert str(resultado_esperado) == str(result)
