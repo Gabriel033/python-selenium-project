@@ -12,7 +12,7 @@ Feature: BDD
         And from the WSDL "data_api_testing.json|:|wsdl" do the operator "SUBTRACT" with the first value "5" and the second value "8" and validate that the result must be "-3"
 
 
-        # Actividad --- construir un escenario outline para ejecutar 5 operaciones de suma y 2 operaciones de resta. Provocar que 2 operaciones de suma sean incorrectas y que
+        # Actividad --- construir un escenario outline para ejecutar 5 operaciones de suma y 5 operaciones de resta. Provocar que 2 operaciones de suma sean incorrectas y que
         # 2 operaciones de resta sean incorrectas.
 
     @API_Testing_Actividad
